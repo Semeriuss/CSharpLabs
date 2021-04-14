@@ -11,11 +11,19 @@ namespace Lab_7
             Console.Write("Input distance (m): ");
             double distance = double.Parse(Console.ReadLine());
 
-            Console.Write("Input time (s): ");
-            double time = double.Parse(Console.ReadLine());
+            Console.Write("Input time (hr): ");
+            double hour = double.Parse(Console.ReadLine());
+            Console.Write("Input time (min): ");
+            double minutes = double.Parse(Console.ReadLine());
+            Console.Write("Input time (sec): ");
+            double seconds = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"The Speed is: {distance/time} m/s");
-            
+            double toHour = hour + (minutes/60) + (seconds/3600);
+            double inKilometersPerHour = (distance/1000)/toHour;
+            double inMilesPerHour = inKilometersPerHour/3.6;
+
+            Console.WriteLine($"The Speed is: {inKilometersPerHour} km/hr");
+            Console.WriteLine($"The Speed is: {inMilesPerHour} mi/hr");
         }
     }
 }
