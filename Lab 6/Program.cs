@@ -7,8 +7,6 @@ namespace Lab_6
         static void Main(string[] args)
         {
             Console.WriteLine("Display values of a function");
-            
-            double x;
 
             for(int y = -5; y < 6; y++)
             {
